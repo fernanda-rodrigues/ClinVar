@@ -127,7 +127,7 @@ job = pypez.Job()
 
 # normalize (convert to minimal representation and left-align)
 # the normalization code is in a different repo (useful for more than just clinvar) so here I just wget it:
-job.add("wget -N https://github.com/ericminikel/minimal_representation/blob/master/normalize.py")
+job.add("wget -N https://raw.githubusercontent.com/ericminikel/minimal_representation/master/normalize.py --no-check-certificate")
 
 for genome_build in ('b37', 'b38'):
     # extract the GRCh37 coordinates, mutant allele, MeasureSet ID and PubMed IDs from it. This currently takes about 20 minutes.
